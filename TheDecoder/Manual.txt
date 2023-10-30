@@ -1,0 +1,83 @@
+Manual for The Decoder
+
+ABOUT:
+- Section 1 is about the requirements
+- Section 2 is about starting up instructions
+- Section 3 is the manual for interacting with the database system
+- Recommended: Start playing the game first, then read through the manual when prompted.
+
+
+Section 1: Requirements
+- Require Java to play the game.
+- Works for Windows OS. 
+
+
+Section 2: How to play the game
+- Start the system by using the TheDecoder.cmd file
+- The game is played using the Command Prompt application for Windows. NOTE: It uses Command Prompt app as the interface for Console, not for any commands other than those needed to run the TheDecoder.jar file. The commands are listed below.
+
+- If you don't want to use the TheDecoder.cmd file, you can create a new .txt file (using Notepad or any other text applications) and type the following lines:
+
+cd %~dp0
+java -jar TheDecoder.jar
+
+then change the file extension from .txt to .cmd to work with Command Prompt application, available on all Windows OS. Afterwards, move the .cmd file to the same folder with the .jar file and run it.
+
+These commands are used to locate the game folder, then use java to execute the .jar file (the game file). 
+
+More notes on the game page:
+halfad.itch.io/the-decoder
+Have fun.
+
+
+Section 3: The Manual
+The following actions/commands will include explanations and examples of their usage in the game. Some commands are also mentioned within the game's tutorial.
+List of all possible actions/commands
+
+help
+Displays the list of all usable commands in the system.
+
+rep [message]
+Replies to your handler.
+Example: rep hello : Reply "hello" to the handler
+* NOTE: this is used for a number of different messages, including notable keywords/names, ID of database entries, or other messages prompted by the handler.
+
+sid [keyword/name of entry]
+Search the ID of an entry, used for sending data entries to your handler.
+Example: sid Foundation : Search for the ID for the entry "Foundation" (fnd)
+
+src [ID of entry]
+Search the database using the ID of an entry.
+Example: src fnd : Search for information from the entry "Foundation"
+* NOTE: to send encrypted databases (using rep command), use the ID directly followed by the encryption protocol. Example: rep fnd-mc : send the Foundation entry, encrypted into morse code, to the handler.
+
+src [keyword/name of entry]
+Search the database using the name of an entry.
+Example: src Foundation : Search for information from the entry "Foundation"
+
+dcr [encryption protocol]
+Decode the handler's message. Anything not encrypted by the same protocol will be displayed as "____"
+- Currently available encryption protocol: -mc : Translate Morse code
+Example: dcr -mc : Decrypt handler's message from morse code to letters
+
+ins [data ID]
+Install new entries into the database. ID will be prompted from the handler, or use ID "self" to install all entries of the account's database to your system.
+Example: ins b1528d2 : Install b1528d2, containing 13 entries.
+* NOTE: This does not install from the internet.
+
+list
+Displays all available data entries within the current database
+
+quit
+Log out of the current account, prompting a new login credential.
+* NOTE: don't do this unless you are prompted by the handler. You can always login again, but this will reset your progress with the current account.
+
+
+Several explanations of the database system:
+- When prompted for login info, use the login info given by handler, or type anything in to start the tutorial. (Later on, to revisit the tutorial, login to the following account: rookie)
+- Database refers to the system's database containing multiple data entries, containing information about the world of Orb Walker.
+- The system's database will store data for the duration of the session (throughout multiple accounts), but will reset after you turn the game off.
+
+
+
+When you are ready, login to the following account: martinss99286
